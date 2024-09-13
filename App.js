@@ -3,9 +3,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import LoginScreen from './screens/LoginScreen';
-import RegistrationScreen from './screens/RegistrationScreen';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import { ScreenStackHeaderSearchBarView } from 'react-native-screens';
+import Signup from './screens/SignupScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,7 +19,7 @@ export default function App() {
     }}>
       
     <Stack.Screen name='Login' component={LoginScreen} />
-    <Stack.Screen name='Register' component={RegistrationScreen} />
+    <Stack.Screen name='SignUp' component={Signup} />
     
     </Stack.Navigator>
   </NavigationContainer>
