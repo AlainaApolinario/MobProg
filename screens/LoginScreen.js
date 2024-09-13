@@ -1,7 +1,14 @@
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import Signup from './SignupScreen';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
+    const navigation = useNavigation();
+    const handleSignup= () => {
+        navigation.navigate("SignUp");
+
+    }
     const handleLoginPress = () => {
          console.log('Login button pressed')
     }
@@ -23,7 +30,11 @@ const LoginScreen = () => {
      {handleLoginPress}>
         <Text style={styles.loginButtonText}>Login</Text>
      </TouchableOpacity>
-     
+     <View>
+     <TouchableOpacity onPress={handleSignup}>
+     <Text style ={styles.footerText}>Don't Have an Account? <Text style={{textDecorationLine: "underline"}}>Signup</Text></Text>
+     </TouchableOpacity>
+     </View>
      </View>
 
     
@@ -87,5 +98,11 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 15,
         fontWeight: 'bold'
+    },
+    footerText: {
+        color : "#ada096",
+       textAlign : "center",
+       fontSize: 16,
+       marginTop: 100,
     }
 })

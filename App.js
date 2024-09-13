@@ -1,11 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import LoginScreen from './screens/LoginScreen';
-import { Header } from 'react-native/Libraries/NewAppScreen';
-import { ScreenStackHeaderSearchBarView } from 'react-native-screens';
-import Signup from './screens/SignupScreen';
+import SignupScreen from './screens/SignupScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,7 +16,7 @@ export default function App() {
     }}>
       
     <Stack.Screen name='Login' component={LoginScreen} />
-    <Stack.Screen name='SignUp' component={Signup} />
+    <Stack.Screen name='SignUp' component={SignupScreen} />
     
     </Stack.Navigator>
   </NavigationContainer>
